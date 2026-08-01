@@ -1,8 +1,28 @@
 aid: soria
 name: Soria
-description: Soria is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Soria is an AI-native financial terminal built for healthcare investors. The
+  platform aggregates financial data from 125+ public and private sources into
+  continuously updated financial models and delivers them through a terminal UI,
+  an MCP server, an API, warehouse sync, and a research feed. Soria targets
+  bulge-bracket banks, boutique research firms, and the largest hedge funds that
+  specialize in the healthcare sector, turning fragmented healthcare and life
+  sciences data into live, analyst-ready models. Backed by Y Combinator. Its
+  public surface is a single-page marketing site; the API and MCP delivery
+  channels are gated to customers and are not publicly documented.
 url: https://raw.githubusercontent.com/api-evangelist/soria/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.soriaanalytics.com/images/social-preview.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -11,12 +31,50 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
+- Financial Data
+- Healthcare
+- Investment Research
+- Market Data
+- Analytics
+- Artificial Intelligence
+- Financial Terminal
+- Hedge Funds
 apis: []
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+common:
+- type: DomainSecurity
+  url: security/soria-domain-security.yml
+- type: WellKnown
+  url: well-known/soria-well-known.yml
+- type: ContentSignal
+  url: well-known/soria-robots-content-signal.txt
+  name: robots.txt Content-Signal (AIPREF)
+- type: LLMsTxt
+  url: llms/soria-llms.txt
+- type: Website
+  url: https://www.soriaanalytics.com
+  name: Soria Analytics
+- type: SignUp
+  url: https://app.soriaanalytics.com
+  name: Soria App (login / sign in)
+- type: Support
+  url: https://cal.com/soria/meetings
+  name: Book a demo
+- type: Careers
+  url: https://www.soriaanalytics.com/careers
+  name: Careers
+- type: LinkedIn
+  url: https://www.linkedin.com/company/soriaanalytics/
+  name: LinkedIn

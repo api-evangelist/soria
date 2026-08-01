@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.soriaanalytics.com
+host: https://www.soriaanalytics.com
+notes: >-
+  The main site is a client-rendered single-page app that serves the SPA HTML
+  shell (HTTP 200, content-type text/html) for every unknown path, so a 200 on a
+  /.well-known/ path is the SPA fallback, not a real document. Each candidate was
+  verified by content-type and body: none of the standard discovery documents are
+  actually published. The site DOES publish a real robots.txt carrying Cloudflare
+  Content-Signal (AIPREF-style) directives and a sitemap.xml.
+documents:
+- path: /robots.txt
+  status: 200
+  real: true
+  content_type: text/plain
+  file: soria-robots-content-signal.txt
+  note: Cloudflare-managed Content-Signal (search=yes, ai-train=no, use=reference); blocks GPTBot/ClaudeBot/CCBot/Google-Extended/Bytespider/Amazonbot et al.
+- path: /sitemap.xml
+  status: 200
+  real: true
+  content_type: application/xml
+  note: single URL (homepage) only
+- path: /.well-known/security.txt
+  status: 200
+  real: false
+  note: SPA HTML fallback, not a real security.txt
+- path: /.well-known/openid-configuration
+  status: 200
+  real: false
+  note: SPA HTML fallback
+- path: /.well-known/oauth-authorization-server
+  status: 200
+  real: false
+  note: SPA HTML fallback
+- path: /.well-known/api-catalog
+  status: 200
+  real: false
+  note: SPA HTML fallback
+- path: /.well-known/ai-plugin.json
+  status: 200
+  real: false
+  note: SPA HTML fallback
